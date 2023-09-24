@@ -6,6 +6,7 @@
         <artifactId>ai-copilot</artifactId>
         <groupId>com.ai</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -15,6 +16,16 @@
 
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.ai</groupId>
+            <artifactId>ai-copilot-service</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ai</groupId>
+            <artifactId>ai-copilot-manager</artifactId>
+        </dependency>
 
         <!-- Spring Web模块 -->
         <dependency>

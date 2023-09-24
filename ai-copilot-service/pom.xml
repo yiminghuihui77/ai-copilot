@@ -17,6 +17,26 @@
 
   <dependencies>
 
+    <dependency>
+      <groupId>com.ai</groupId>
+      <artifactId>ai-copilot-dao</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ai</groupId>
+      <artifactId>ai-copilot-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ai</groupId>
+      <artifactId>ai-copilot-common</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ai</groupId>
+      <artifactId>ai-copilot-manager</artifactId>
+    </dependency>
+
 
   </dependencies>
 

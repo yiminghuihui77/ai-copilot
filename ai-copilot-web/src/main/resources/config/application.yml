@@ -3,3 +3,10 @@ spring:
     name: ai-copilot
   profiles:
     active: dev
+
+
+# mybatis mapper 文件路径
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.ai.model

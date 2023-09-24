@@ -4,7 +4,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.ai</groupId>
+  <parent>
+    <artifactId>ai-copilot</artifactId>
+    <groupId>com.ai</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
   <artifactId>ai-copilot-dao</artifactId>
   <version>1.0-SNAPSHOT</version>
 
@@ -13,8 +18,51 @@
 
   <dependencies>
 
+    <!--mysql驱动-->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+
+    <!--druid数据库连接池-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid-spring-boot-starter</artifactId>
+    </dependency>
+
+    <!--mybatis-->
+    <dependency>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter</artifactId>
+    </dependency>
+
+    <!--【数据库】分页插件-->
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper-spring-boot-starter</artifactId>
+    </dependency>
+
 
   </dependencies>
+
+
+  <build>
+    <plugins>
+      <!--     mybatis-generator maven插件，用于生成DAO代码       -->
+      <plugin>
+        <groupId>org.mybatis.generator</groupId>
+        <artifactId>mybatis-generator-maven-plugin</artifactId>
+        <version>1.4.2</version>
+        <configuration>
+          <verbose>true</verbose>
+          <overwrite>true</overwrite>
+          <!-- mybatis-generator配置文件路径 -->
+          <configurationFile>src/main/resources/mybatis/generator/generatorConfig.xml</configurationFile>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
 
 
 </project>

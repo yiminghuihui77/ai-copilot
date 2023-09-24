@@ -24,12 +24,51 @@
     <druid.version>1.2.18</druid.version>
     <mybatis.version>2.0.1</mybatis.version>
     <satoken.version>1.35.0.RC</satoken.version>
+    <pagehelper.version>1.4.7</pagehelper.version>
+    <fastjson.version>2.0.40</fastjson.version>
   </properties>
 
 
   <dependencyManagement>
 
     <dependencies>
+
+      <!--子模块-->
+      <dependency>
+        <groupId>com.ai</groupId>
+        <artifactId>ai-copilot-web</artifactId>
+        <version>${version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.ai</groupId>
+        <artifactId>ai-copilot-service</artifactId>
+        <version>${version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.ai</groupId>
+        <artifactId>ai-copilot-dao</artifactId>
+        <version>${version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.ai</groupId>
+        <artifactId>ai-copilot-common</artifactId>
+        <version>${version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.ai</groupId>
+        <artifactId>ai-copilot-api</artifactId>
+        <version>${version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.ai</groupId>
+        <artifactId>ai-copilot-manager</artifactId>
+        <version>${version}</version>
+      </dependency>
 
       <dependency>
         <!-- Import dependency management from Spring Boot -->
@@ -61,6 +100,28 @@
         <artifactId>mybatis-spring-boot-starter</artifactId>
         <version>${mybatis.version}</version>
       </dependency>
+
+      <!--【数据库】分页插件-->
+      <dependency>
+        <groupId>com.github.pagehelper</groupId>
+        <artifactId>pagehelper-spring-boot-starter</artifactId>
+        <version>${pagehelper.version}</version>
+      </dependency>
+
+      <!--lombok -->
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <optional>true</optional>
+      </dependency>
+
+      <dependency>
+        <groupId>com.alibaba.fastjson2</groupId>
+        <artifactId>fastjson2</artifactId>
+        <version>${fastjson.version}</version>
+      </dependency>
+
+
 
       <!-- Sa-Token 权限认证, 在线文档：http://sa-token.dev33.cn/ -->
       <dependency>
@@ -100,6 +161,8 @@
           </execution>
         </executions>
       </plugin>
+
+
     </plugins>
   </build>
 
